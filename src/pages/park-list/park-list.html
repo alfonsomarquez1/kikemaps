@@ -1,0 +1,20 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>National Parks</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor="let park of parks" (click)="goParkDetails(park)" detail-push>
+            <ion-thumbnail item-left>
+                <img src="assets/img/thumbs/{{park.image}}">
+            </ion-thumbnail>
+            <h2>{{park.name}}</h2>
+            <p>{{park.state}}</p>
+        </ion-item>
+    </ion-list>
+</ion-content>
